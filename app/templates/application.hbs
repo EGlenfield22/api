@@ -1,3 +1,4 @@
+{{#scroll-wrapper as |returnToTopLinkVisible|}}
 <div id="header">
   <div id="wrapper">
     <a id="logo" href="/">&nbsp;</a>
@@ -86,9 +87,9 @@
         </ol>
       </li>
 
-      {{#if view.returnToTopLinkVisible}}
+      {{#if returnToTopLinkVisible}}
         <div id="back-to-top">
-          <a href="#" {{action "scrollToTop" target=view}}>⬆ Back to Top</a>
+          <a href="#" {{action "scrollToTop"}}>⬆ Back to Top</a>
         </div>
       {{/if}}
     </ol>
@@ -121,3 +122,4 @@
     </div>
   </div>
 </div>
+{{/scroll-wrapper}}

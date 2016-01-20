@@ -11,6 +11,9 @@ export default Ember.Controller.extend({
   }),
 
   actions: {
+    scrollToTop: function(){
+      window.scrollTo(0,0);
+    },
     versionChanged(version){
       var parser = document.createElement('a');
       parser.href = window.location;
