@@ -147,7 +147,10 @@ p {
   #back-to-top {
     padding-left: 13px;
     text-align: center;
-    display: none;
+    position: fixed;
+    top: 20px;
+    left: 0px;
+    display: block;
     @include transition(opacity 0.05s linear);
 
     @media screen and (max-width: 1200px) {

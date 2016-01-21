@@ -1,14 +1,10 @@
-import Ember from "ember";
+import Ember from 'ember';
 
 const { on } = Ember;
 
-export default Ember.View.extend({
+export default Ember.Component.extend({
   returnToTopLinkVisible: false,
-  actions: {
-    scrollToTop: function(){
-      window.scrollTo(0,0);
-    }
-  },
+
   observeScrollState: on('didInsertElement', function(){
     var _this = this;
     new window.Waypoint({
