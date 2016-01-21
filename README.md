@@ -42,14 +42,14 @@ This Ember Application allows you to browse API docs.
 
   ```shell
   ember server \
-    --lib-dir=/Users/trek/Development/ember/ember.js \
+    --lib-dir=../ember.js \
     --default-index=Ember \
     --default-module=ember \
     --github-url=https://github.com/emberjs/ember.js \
-    --rev=v1.6.0 \
+    --rev=master \
     --environment=production \
     --project-name=ember.js \
-    --execution-dir=/Users/trek/Development/ember/ember.js/docs 
+    --execution-dir=../ember.js
   ```
 
 1. View the app
