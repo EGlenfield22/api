@@ -9,6 +9,8 @@ export default Component.extend({
   tagName: 'a',
   attributeBindings: ['href'],
   href: computed('file', 'line', function(){
-    return "%@/tree/%@/%@#L%@".fmt(config.githubUrl, config.sha, get(this, 'file'), get(this, 'line'));
+    const itemFile = get(this, 'file');
+    const itemLine = get(this, 'line');
+    return `${config.githubUrl}/tree/${config.sha}/${itemFile}#L${itemLine}`;
   })
 });

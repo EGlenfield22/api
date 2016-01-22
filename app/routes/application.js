@@ -12,7 +12,7 @@ export default Route.extend({
 
     if (!config.singleLibraryEmbedded) {
       libraries = this.get('ajax').request('/config/libraries.json');
-      versions = this.get('ajax').request('%@/versions.json'.fmt(config.projectName));
+      versions = this.get('ajax').request(`${config.projectName}/versions.json`);
     }
 
     return RSVP.hash({

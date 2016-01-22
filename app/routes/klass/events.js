@@ -7,6 +7,6 @@ export default Route.extend({
 
   model(){
     var name = this.modelFor('klass').name;
-    return this.get('ajax').request('docs/%@/events.json'.fmt(name));
+    return this.get('ajax').request(`docs/${name}/events.json`);
   }
 });
