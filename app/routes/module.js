@@ -1,9 +1,8 @@
 import Ember from "ember";
-import ScrollToTopAfterRenderMixin from '../mixins/scroll-to-top-after-render';
 
 const { Route, inject } = Ember;
 
-export default Route.extend(ScrollToTopAfterRenderMixin, {
+export default Route.extend({
   ajax: inject.service(),
 
   model(params){
