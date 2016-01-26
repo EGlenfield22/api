@@ -10,9 +10,9 @@ This Ember Application allows you to browse API docs.
   npm install && bower install
   ```
 
-2. Install `yuidocjs` (if needed) on your machine (`npm -g install yuidocjs`) and run it in the root of your ember.js folder (`yuidoc .`)
+2. Clone the main `ember.js` repo down to your machine, cd into it and run `bower install` to install all needed dependencies.
 
-1. Start the app with the following command args
+3. Start the app with the following command args
   
   * `lib-dir` (path) local path to the library documented with YUIDoc
   e.g. `/usr/yourname/code/ember.js`
