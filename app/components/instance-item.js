@@ -16,7 +16,9 @@ export default Component.extend(HasWaypoint, {
   name: alias('item.name'),
   routeName: null,
   id: computed('item.name', 'itemType', function() {
-    return "%@_%@".fmt(get(this, 'itemType'), get(this, 'item.name'));
+    let itemType = get(this, 'itemType');
+    let itemName = get(this, 'item.name');
+    return `${itemType}_${itemName}}`;
   }).readOnly(),
   isPrivate: alias('item.isPrivate'),
   classNames: ['property', 'item-entry'],
@@ -60,6 +62,8 @@ export default Component.extend(HasWaypoint, {
     @returns String
   */
   codeLocation: computed('item.file', 'item.line', function() {
-    return '%@/blob/%@/%@#L%@'.fmt(config.githubUrl, config.sha, get(this, 'item.file'), get(this, 'item.line'));
+    const itemFile = get(this, 'item.file');
+    const itemLine = get(this, 'item.line');
+    return `${config.githubUrl}/blob/${config.sha}/${itemFile}#L${itemLine}`;
   }).readOnly()
 });

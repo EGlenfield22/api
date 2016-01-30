@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
   rev: config.rev,
   sha: config.sha,
   githubHREF: computed(function(){
-    return "%@/commits/%@".fmt(config.githubUrl, config.sha);
+    return `${config.githubUrl}/commits/${config.sha}`;
   }),
 
   actions: {
@@ -18,7 +18,7 @@ export default Ember.Controller.extend({
       var parser = document.createElement('a');
       parser.href = window.location;
 
-      var port = parser.port ? ":%@".fmt(parser.port) : "";
+      var port = parser.port ? `:${parser.port}` : "";
       var location = [parser.protocol, '//', parser.hostname, port, '/', config.projectName, '/', version].join('');
 
       window.location = location;

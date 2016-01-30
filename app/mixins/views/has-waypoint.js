@@ -1,6 +1,6 @@
 import Ember from "ember";
 
-const { on, computed } = Ember;
+const { on, computed, getOwner } = Ember;
 
 export default Ember.Mixin.create({
   scrollTo(){
@@ -50,6 +50,6 @@ export default Ember.Mixin.create({
     access to the router.
   */
   router: computed(function(){
-    return this.container.lookup('router:main');
+    return getOwner(this).lookup('router:main');
   }),
 });

@@ -6,6 +6,6 @@ export default Route.extend({
   ajax: inject.service(),
 
   model(params){
-    return this.get('ajax').request('docs/modules/%@.json'.fmt(params.moduleId));
+    return this.get('ajax').request(`docs/modules/${params.moduleId}.json`);
   }
 });
